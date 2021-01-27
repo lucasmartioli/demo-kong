@@ -1,0 +1,3 @@
+curl -X POST http://localhost:8001/services/Weather/plugins --data name=oauth2 --data config.enable_client_credentials=true
+curl -X POST http://localhost:8001/consumers/teste/oauth2 --data name=AuthTest --data client_id=57f1e041c7cc4153a13980fcb9980b32 --data client_secret=312341355134341 --data redirect_uris=http://some-domain/endpoint/ --data hash_secret=true
+curl -X POST http://localhost:8001/consumers/teste2/oauth2 --data name=AuthTest --data client_id=57f1e041gggagd153a13980fcb9980b32 --data client_secret=312341355hufhidfsidf134341 --data redirect_uris=http://some-domain/endpoint/ --data hash_secret=true

@@ -1,0 +1,2 @@
+curl -i -X POST --url http://localhost:8001/consumers/teste/plugins/ --data name=rate-limiting --data config.minute=4
+curl -i -X POST --url http://localhost:8001/consumers/teste2/plugins/ --data name=rate-limiting --data config.minute=3

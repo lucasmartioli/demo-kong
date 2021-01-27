@@ -1,0 +1,27 @@
+version: '3'
+services:
+    kong-database:
+        image: cassandra:3
+        container_name: kong-database
+        hostname: kong-database
+        environment:
+            - DS_LICENSE=accept
+            - SEEDS=kong-database
+            - START_RPC=false
+            - CLUSTER_NAME=cassandra_cluster
+            - NUM_TOKENS=3
+            - DC=DC1
+            - RACK=RAC1
+        expose:
+            - 7000
+            - 7001
+            - 7199
+            - 9042
+            - 9142
+        ports:
+            - 9042:9042
+        networks: 
+            - kong-net            
+networks:
+  kong-net:
+    name: kong-net

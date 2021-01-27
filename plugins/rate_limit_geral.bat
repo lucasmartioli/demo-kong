@@ -1,0 +1,1 @@
+curl -i -X POST --url http://localhost:8001/services/Weather/plugins/ --data name=rate-limiting --data config.minute=2

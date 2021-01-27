@@ -1,0 +1,1 @@
+curl -i -X POST http://localhost:8001/services --data name=Weather --data url=http://192.168.0.114:8087/WeatherForecast

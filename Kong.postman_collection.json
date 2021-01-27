@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "08993c31-018a-4f23-837e-fc5a528e27a6",
+		"name": "Kong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/services/Weather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"Weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste do serviço Weather - Sem rota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste do serviço Weather - Rota Weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/weather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Consumers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/consumers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get OAuth 2 - Consumer teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/consumers/teste/oauth2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"teste",
+						"oauth2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get OAuth 2 - Consumer teste2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/consumers/teste2/oauth2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"teste2",
+						"oauth2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticado - User teste",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "312341355134341",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "57f1e041c7cc4153a13980fcb9980b32",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://localhost:8442/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Teste",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7999"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticado - User teste2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "312341355134341",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "57f1e041c7cc4153a13980fcb9980b32",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://localhost:8442/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Teste",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7999"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Service",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/services/Weather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"Weather"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

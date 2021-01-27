@@ -1,0 +1,1 @@
+curl -i -X POST http://localhost:8001/services/Weather/routes --data paths[]=/weather --data name=GetWeather2
